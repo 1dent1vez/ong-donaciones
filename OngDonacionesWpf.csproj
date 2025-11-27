@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -63,15 +64,46 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Controllers\DestinoFondosController.cs" />
+    <Compile Include="Controllers\DonacionesController.cs" />
+    <Compile Include="Controllers\DonantesController.cs" />
+    <Compile Include="Controllers\ProyectosController.cs" />
+    <Compile Include="Controllers\RecibosController.cs" />
+    <Compile Include="Data\Db.cs" />
+    <Compile Include="Data\DbConnectionFactory.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\DestinoFondosView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DonacionesView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DonantesView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainMenuView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ProyectosView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RecibosView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
-    <Compile Include="obj\Debug\App.g.i.cs" />
-    <Compile Include="obj\Debug\MainWindow.g.i.cs" />
+    <Compile Include="Models\AreaFoco.cs" />
+    <Compile Include="Models\DestinoFondo.cs" />
+    <Compile Include="Models\Donacion.cs" />
+    <Compile Include="Models\Donante.cs" />
+    <Compile Include="Models\Empleado.cs" />
+    <Compile Include="Models\MetodoPago.cs" />
+    <Compile Include="Models\Proyecto.cs" />
+    <Compile Include="Models\Recibo.cs" />
+    <Compile Include="Models\TipoDonante.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -89,10 +121,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="obj\Debug\OngDonacionesWpf.csproj.AssemblyReference.cache" />
-    <None Include="obj\Debug\OngDonacionesWpf_MarkupCompile.i.cache" />
-    <None Include="obj\Debug\OngDonacionesWpf_MarkupCompile.i.lref" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -102,33 +130,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitattributes" />
+    <Content Include=".gitignore" />
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="bin\Debug\" />
-    <Folder Include="Controllers\Base\" />
-    <Folder Include="Controllers\DestinoFondos\" />
-    <Folder Include="Controllers\Donaciones\" />
-    <Folder Include="Controllers\Donantes\" />
-    <Folder Include="Controllers\Proyectos\" />
-    <Folder Include="Controllers\Recibos\" />
-    <Folder Include="Data\Context\" />
-    <Folder Include="Data\Mappings\" />
-    <Folder Include="Data\Repositories\Interfaces\" />
-    <Folder Include="Data\Repositories\Sql\" />
-    <Folder Include="DTOs\" />
-    <Folder Include="Models\Common\" />
-    <Folder Include="Models\DestinoFondos\" />
-    <Folder Include="Models\Donaciones\" />
-    <Folder Include="Models\Donantes\" />
-    <Folder Include="Models\Proyectos\" />
-    <Folder Include="Models\Recibos\" />
-    <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="Services\" />
-    <Folder Include="Utils\" />
-    <Folder Include="Views\DestinoFondos\" />
-    <Folder Include="Views\Donaciones\" />
-    <Folder Include="Views\Donantes\" />
-    <Folder Include="Views\Proyectos\" />
-    <Folder Include="Views\Recibos\" />
-    <Folder Include="Views\Shell\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

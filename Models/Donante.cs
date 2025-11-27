@@ -10,10 +10,10 @@
         public string Nombre { get; set; } = string.Empty;
 
         // Email VARCHAR(100) NULL
-        public string? Email { get; set; }
+        public string Email { get; set; }
 
         // Telefono VARCHAR(20) NULL
-        public string? Telefono { get; set; }
+        public string Telefono { get; set; }
 
         // Id_TipoDonante INT NOT NULL (FK a TiposDonante)
         public int IdTipoDonante { get; set; }

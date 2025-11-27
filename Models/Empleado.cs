@@ -1,4 +1,6 @@
-﻿namespace OngDonacionesWpf.Models
+﻿using System.Linq;
+
+namespace OngDonacionesWpf.Models
 {
     // Tabla: Empleados
     public class Empleado
@@ -13,15 +15,18 @@
         public string ApellidoPaterno { get; set; } = string.Empty;
 
         // A_Materno VARCHAR(50) NULL
-        public string? ApellidoMaterno { get; set; }
+        public string ApellidoMaterno { get; set; }
 
         // Telefono VARCHAR(20) NULL
-        public string? Telefono { get; set; }
+        public string Telefono { get; set; }
 
         // Email VARCHAR(100) NULL
-        public string? Email { get; set; }
+        public string Email { get; set; }
 
         // Puesto VARCHAR(50) NULL
-        public string? Puesto { get; set; }
+        public string Puesto { get; set; }
+
+        public string NombreCompleto =>
+            string.Join(" ", new[] { Nombre, ApellidoPaterno, ApellidoMaterno }.Where(x => !string.IsNullOrWhiteSpace(x)));
     }
 }

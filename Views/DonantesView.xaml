@@ -1,7 +1,10 @@
-﻿<UserControl x:Class=""OngDonacionesWpf.Views.DonantesView""
-             xmlns=""http://schemas.microsoft.com/winfx/2006/xaml/presentation""
-             xmlns:x=""http://schemas.microsoft.com/winfx/2006/xaml"">
+﻿<UserControl x:Class="OngDonacionesWpf.Views.DonantesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Grid>
-        <TextBlock Text=""Vista Donantes"" FontSize=""20""/>
+        <TextBlock Text="Vista Donantes"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="24"/>
     </Grid>
 </UserControl>

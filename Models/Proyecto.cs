@@ -10,7 +10,7 @@
         public string NombreProyecto { get; set; } = string.Empty;
 
         // Descripcion_Proyecto VARCHAR(255) NULL
-        public string? DescripcionProyecto { get; set; }
+        public string DescripcionProyecto { get; set; }
 
         // Monto_Requerido DECIMAL(18,2) NOT NULL
         public decimal MontoRequerido { get; set; }
